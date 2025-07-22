@@ -1,48 +1,44 @@
-// src/App.tsx
-import React, { useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import CategoryTabs from './components/CategoryTab';
-import BlogCard from './components/BlogCard';
+import Hero from './components/HeroSection';
+import FeaturedPosts from './components/BlogCard';
+import About from './components/about';
+import Categories from './components/CategoryTab';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
-import { blogPosts } from './data/BlogPosts';
-import { categories } from './data/Categories';
 
-const App = () => {
-  const [likedPosts, setLikedPosts] = useState(new Set<number>());
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('all');
+gsap.registerPlugin(ScrollTrigger);
 
-  const toggleLike = (postId: number) => {
-    const updated = new Set(likedPosts);
-    updated.has(postId) ? updated.delete(postId) : updated.add(postId);
-    setLikedPosts(updated);
-  };
+function App() {
+  const appRef = useRef<HTMLDivElement>(null);
 
-  const filteredPosts = activeTab === 'all'
-    ? blogPosts
-    : blogPosts.filter(post => post.category.toLowerCase() === activeTab);
+  useEffect(() => {
+    // Initialize smooth scrolling and global animations
+    gsap.set('body', { overflow: 'hidden' });
+    
+    // Page load animation
+    const tl = gsap.timeline();
+    tl.to('body', { overflow: 'auto', duration: 0.1, delay: 0.5 });
+    
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
 
   return (
-    <div>
-      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <HeroSection />
-      <CategoryTabs categories={categories} activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 max-w-6xl mx-auto">
-        {filteredPosts.map(post => (
-          <BlogCard key={post.id} post={post} likedPosts={likedPosts} toggleLike={toggleLike} />
-        ))}
-      </main>
-      <div className="text-center mt-12">
-        <button className="bg-gradient-to-r from-rose-400 to-purple-400 text-white px-12 py-4 rounded-full font-semibold hover:from-rose-500 hover:to-purple-500 transition-all transform hover:scale-105 shadow-xl text-lg">
-          Discover More Recipes
-        </button>
-      </div>
+    <div ref={appRef} className="min-h-screen bg-white">
+      <Header />
+      <Hero />
+      <FeaturedPosts />
+      <About />
+      <Categories />
       <Newsletter />
       <Footer />
     </div>
   );
-};
+}
 
 export default App;
