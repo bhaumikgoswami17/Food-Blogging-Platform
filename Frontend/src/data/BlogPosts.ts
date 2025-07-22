@@ -1,0 +1,110 @@
+export const blogPosts = [
+    {
+      id: 1,
+      title: "Shahi Paneer Made Easy",
+      author: "Priya Sharma",
+      time: "2 hours ago",
+      image: "https://i.pinimg.com/736x/53/ee/0e/53ee0eaa5b9ab08b2a8ca9848bd4d264.jpg",
+      excerpt: "Creamy and rich shahi paneer that melts in your mouth. Perfect for family dinners!",
+      likes: 234,
+      comments: 28,
+      readTime: "6 min read",
+      category: "North Indian"
+    },
+    {
+      id: 2,
+      title: "Crispy Dosa Recipe",
+      author: "Ravi Kumar",
+      time: "4 hours ago",
+      image: "https://i.pinimg.com/1200x/12/fa/09/12fa0949b2710c669630bb38c662eac0.jpg",
+      excerpt: "Golden crispy dosa with coconut chutney. A South Indian breakfast favorite!",
+      likes: 189,
+      comments: 22,
+      readTime: "8 min read",
+      category: "South Indian"
+    },
+    {
+      id: 3,
+      title: "Homemade Biryani",
+      author: "Fatima Khan",
+      time: "6 hours ago",
+      image: "https://i.pinimg.com/736x/27/1c/72/271c726a0adbb632dec74b80e8dac2aa.jpg",
+      excerpt: "Fragrant basmati rice with tender meat and aromatic spices. The king of Indian dishes!",
+      likes: 312,
+      comments: 45,
+      readTime: "12 min read",
+      category: "North Indian"
+    },
+    {
+      id: 4,
+      title: "Quick Rajma Curry",
+      author: "Amit Patel",
+      time: "8 hours ago",
+      image: "https://i.pinimg.com/1200x/46/f3/94/46f394cf423770dbd61321b766d51823.jpg",
+      excerpt: "Healthy kidney bean curry that's perfect with rice. Comfort food at its best!",
+      likes: 156,
+      comments: 18,
+      readTime: "5 min read",
+      category: "North Indian"
+    },
+    {
+      id: 5,
+      title: "Sweet Gulab Jamun",
+      author: "Meera Joshi",
+      time: "10 hours ago",
+      image: "https://i.pinimg.com/736x/9c/64/1f/9c641f34a51c3d39c254f34acfb25011.jpg",
+      excerpt: "Soft and spongy gulab jamun soaked in sugar syrup. A festival favorite!",
+      likes: 278,
+      comments: 34,
+      readTime: "7 min read",
+      category: "Sweets"
+    },
+    {
+      id: 6,
+      title: "Spicy Samosa Chaat",
+      author: "Rohit Singh",
+      time: "12 hours ago",
+      image: "https://i.pinimg.com/1200x/03/e2/bd/03e2bdea2350b0109473b569a7d7c91a.jpg",
+      excerpt: "Crispy samosas with tangy chutneys and yogurt. Street food magic at home!",
+      likes: 201,
+      comments: 26,
+      readTime: "4 min read",
+      category: "Street Food"
+    },
+    {
+      id: 7,
+      title: "Lemon Rice Recipe",
+      author: "Nikita Sharma",
+      time: "19 hours ago",
+      image: "https://i.pinimg.com/1200x/d5/33/2a/d5332a56a0c608684c758aac714a0cd6.jpg",
+      excerpt: "Zesty lemon rice tempered with mustard seeds and curry leaves. A tangy South Indian delight perfect for any meal!",
+      likes: 150,
+      comments: 15,
+      readTime: "10 min read",
+      category: "South Indian"
+    },
+    {
+      id: 8,
+      title: "Khandvi",
+      author: "Priya Soni",
+      time: "1 hours ago",
+      image: "https://i.pinimg.com/1200x/bd/d0/32/bdd032169a56d4c5a16fbc1379f8817f.jpg",
+      excerpt: "Soft, melt-in-mouth khandvi rolls tempered with mustard seeds and garnished with coconut. A light and flavorful Gujarati treat!",
+      likes: 260,
+      comments: 19,
+      readTime: "20 min read",
+      category: "Street Food"
+    },
+    {
+      id: 9,
+      title: "Rasmalai",
+      author: "Nishu Singh",
+      time: "5 hours ago",
+      image: "https://i.pinimg.com/736x/e7/5d/c6/e75dc6e6bddaba7ab90517098cd7398a.jpg",
+      excerpt: "Soft, spongy rasmalai soaked in saffron-infused milk. A rich and creamy Bengali dessert favorite!",
+      likes: 300,
+      comments: 10,
+      readTime: "60 min read",
+      category: "Sweets"
+    }
+  ];
