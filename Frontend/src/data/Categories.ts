@@ -1,0 +1,1 @@
+export const categories = ["All", "North Indian", "South Indian", "Street Food", "Sweets", "Snacks"];
